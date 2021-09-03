@@ -1,0 +1,172 @@
+/* framework */
+.shape {
+    background-color: var(--Dark_Blue);
+    padding: 40px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.bar {
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+/* framework */
+/* variables */
+:root {
+    /* --Gradient: hsl(6, 100%, 80%),hsl(335, 100%, 65%) ; */
+    --Pale_Blue: hsl(243, 100%, 93%);
+    --Grayish_Blue: hsl(229, 7%, 55%);
+    --Dark_Blue: hsl(228, 56%, 26%);
+    --Very_Dark_Blue: hsl(229, 57%, 11%);
+}
+/* variables */
+/* global rules */
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--Very_Dark_Blue);
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif !important;
+    position: relative;
+}
+body > img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+/* global rules */
+/* start main */
+main {
+    display: grid;
+    grid-template-columns: 350px 540px;
+    grid-template-rows: 45px 155px;
+    column-gap: 30px;
+    margin: 100px auto;
+    width: calc(350px + 540px + 30px);
+}
+/* end main */
+/* start st */
+.st {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    border-top-right-radius: 100px;
+}
+.st .files {
+    margin: 0;
+    margin-top: 35px;
+    display: flex;
+}
+.st .files span {
+    width: 48px;
+    height: 48px;
+    margin-right: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--Very_Dark_Blue);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+/* end st */
+/* start nd */
+.nd {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    color: white;
+    position: relative;
+}
+.nd p {
+    margin: 0;
+    margin-bottom: 20px;
+}
+.nd .progress {
+    display: block;
+    background-color: #161e4c;
+    width: 100%;
+    height: 20px;
+    margin-bottom: 10px;
+    padding: 2px;
+}
+.nd .progress span {
+    display: block;
+    width: 81.5%;
+    height: 100%;
+    background-image: linear-gradient(to right,hsl(6, 100%, 80%),  hsl(335, 100%, 65%));
+    position: relative;
+}
+.nd .progress span::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: var(--Pale_Blue);
+    position: absolute;
+    top: 1.5px;
+    right: 2.5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.nd .space {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: 700;
+}
+.nd .remaining {
+    background-color: white;
+    color: initial;
+    width: 180px;
+    height: 70px;
+    position: absolute;
+    top: -47px;
+    right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-bottom-right-radius: 0;
+}
+.nd .remaining::before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -15px;
+    right: -23px;
+    border: 23px solid white;
+    border-color: transparent transparent transparent white;
+    transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    -o-transform: rotate(315deg);
+}
+.nd .remaining h2 {
+    margin: 0;
+    color: var(--Very_Dark_Blue);
+    font-size: 35px;
+}
+.nd .remaining h2 span {
+    font-size: 14px;
+    color: var(--Grayish_Blue);
+}
+/* end nd */
